@@ -10,8 +10,9 @@ class MealsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Widget showMeals;
-    showMeals =
-        ListView.builder(itemBuilder: (ctx, index) => Text(meals[index].title));
+    showMeals = ListView.builder(
+        itemCount: meals.length,
+        itemBuilder: (ctx, index) => Text(meals[index].title));
     if (meals.isEmpty) {
       showMeals = Center(
         child: Column(
